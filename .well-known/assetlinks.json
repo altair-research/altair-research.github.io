@@ -22,8 +22,10 @@
       "namespace": "android_app",
       "package_name": "com.altairresearchlab.sproutframe",
       "sha256_cert_fingerprints": [
+        "FC:90:75:BB:97:61:22:5F:07:4C:A3:7D:FD:94:C5:8A:47:8F:FB:64:F6:BA:28:96:9D:05:4C:75:5C:E1:1E:AE",
         "9D:9D:F2:F6:BD:FA:A7:BD:FA:B2:35:C3:80:9B:DB:70:58:49:2E:F5:C7:31:5E:1A:56:E8:3A:68:31:C7:CF:3D",
-        "D4:79:C1:AB:A8:4E:08:0A:7D:CD:84:41:3D:3B:FF:CB:C2:FF:B9:DA:8D:ED:54:51:F5:F4:E5:68:EF:4D:9C:6E"
+        "D4:79:C1:AB:A8:4E:08:0A:7D:CD:84:41:3D:3B:FF:CB:C2:FF:B9:DA:8D:ED:54:51:F5:F4:E5:68:EF:4D:9C:6E",
+        "D2:9F:2A:2D:37:94:54:34:18:39:86:51:A9:A0:C7:22:96:D3:D0:E9:05:AE:99:D5:0D:15:E8:2A:3A:1F:72:75"
       ]
     }
   }

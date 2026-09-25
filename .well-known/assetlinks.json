@@ -13,5 +13,18 @@
         "B2:09:7C:63:7A:45:5E:24:02:11:AD:65:1B:31:80:7F:C4:E1:5B:76:55:0B:F0:3D:8B:DC:42:A9:0F:54:B4:24"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.altairresearchlab.sproutframe",
+      "sha256_cert_fingerprints": [
+        "9D:9D:F2:F6:BD:FA:A7:BD:FA:B2:35:C3:80:9B:DB:70:58:49:2E:F5:C7:31:5E:1A:56:E8:3A:68:31:C7:CF:3D",
+        "D4:79:C1:AB:A8:4E:08:0A:7D:CD:84:41:3D:3B:FF:CB:C2:FF:B9:DA:8D:ED:54:51:F5:F4:E5:68:EF:4D:9C:6E"
+      ]
+    }
   }
 ]

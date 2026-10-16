@@ -4,17 +4,103 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Altair Research Lab</title>
+<meta name="description" content="Small apps and websites made by Altair Research Lab.">
 <meta name="theme-color" content="#0D0D0F">
+<meta property="og:title" content="Altair Research Lab">
+<meta property="og:description" content="Small apps and websites made by Altair Research Lab.">
 <style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0D0D0F;color:#F3F2EF;
-       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-weight:300}
-  a{color:#FF7F6E;text-decoration:none;font-size:1.1rem}
-  ul{list-style:none;padding:0;line-height:2.2;text-align:center}
+  :root{
+    --bg:#0D0D0F; --card:#16161A; --card-hover:#1D1D22; --line:#26262C;
+    --text:#F3F2EF; --muted:#9B9A96; --accent:#FF7F6E; --test:#E8C468;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+       font-weight:300;line-height:1.55;-webkit-font-smoothing:antialiased}
+  main{max-width:880px;margin:0 auto;padding:56px 20px 40px}
+  header{margin-bottom:36px}
+  h1{margin:0;font-size:1.65rem;font-weight:400;letter-spacing:-.01em}
+  h1 .dot{color:var(--accent)}
+  header p{margin:8px 0 0;color:var(--muted);font-size:.98rem}
+
+  .grid{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:1fr}
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+
+  .card{display:flex;flex-direction:column;height:100%;padding:18px 18px 16px;border:1px solid var(--line);
+        border-radius:14px;background:var(--card);color:inherit;text-decoration:none;
+        transition:background .15s ease,border-color .15s ease}
+  .card:hover,.card:focus-visible{background:var(--card-hover);border-color:#34343C;outline:none}
+  .card:focus-visible{box-shadow:0 0 0 2px var(--accent)}
+  .name{display:flex;align-items:center;gap:8px;font-size:1.06rem;font-weight:500;color:var(--text)}
+  .name .arrow{margin-left:auto;color:var(--accent);opacity:.75;transition:transform .15s ease}
+  .card:hover .arrow{transform:translateX(2px);opacity:1}
+  .desc{margin:6px 0 14px;color:#C9C8C4;font-size:.93rem}
+  .meta{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:.72rem;letter-spacing:.02em;padding:3px 8px;border-radius:999px;
+       border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+  .tag.test{color:var(--test);border-color:rgba(232,196,104,.35)}
+
+  footer{margin-top:40px;color:#5E5D5A;font-size:.8rem}
 </style>
 </head>
 <body>
-<ul>
-  <li><a href="/drape/">Personal Color Mirror</a></li>
-</ul>
+<main>
+  <header>
+    <h1>Altair Research Lab<span class="dot">.</span></h1>
+    <p>Small apps and websites, built one at a time.</p>
+  </header>
+
+  <ul class="grid">
+    <li><a class="card" href="https://focustonelab.com/" rel="noopener">
+      <span class="name">FocusTone Lab <span class="arrow">→</span></span>
+      <span class="desc" lang="ko">주의력 과제로 어느 대역에서 당신의 점수가 오르는지 측정합니다.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag">한국어</span></span>
+    </a></li>
+
+    <li><a class="card" href="https://priceafter.com/" rel="noopener">
+      <span class="name">PriceAfter <span class="arrow">→</span></span>
+      <span class="desc" lang="ko">카드 캐시백과 적립까지 다 빼고 나면, 실제로 얼마인지.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag">한국어</span></span>
+    </a></li>
+
+    <li><a class="card" href="/peachplay/">
+      <span class="name">PeachPlay <span class="arrow">→</span></span>
+      <span class="desc">Free, ad-free learning games for Georgia elementary kids, kindergarten to 5th grade.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag">English</span></span>
+    </a></li>
+
+    <li><a class="card" href="https://uncommonplant.com/" rel="noopener">
+      <span class="name">Uncommon Plant <span class="arrow">→</span></span>
+      <span class="desc">A one-person grow room, reported every two weeks. Nothing is for sale; the Pot Finder is free.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag">English</span></span>
+    </a></li>
+
+    <li><a class="card" href="/drape/">
+      <span class="name">Personal Color Mirror <span class="arrow">→</span></span>
+      <span class="desc" lang="ko">카메라에 비친 얼굴에 사계절 드레이프 색을 대보는 퍼스널컬러 미러.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag test">Android · testing</span><span class="tag">한국어</span></span>
+    </a></li>
+
+    <li><a class="card" href="/sprout-frame/">
+      <span class="name">Sprout Frame <span class="arrow">→</span></span>
+      <span class="desc">Shoot your plant, tap the pot rim twice, and see how much it grew since last time. Photos stay in your browser.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag test">Android · testing</span><span class="tag">English</span></span>
+    </a></li>
+
+    <li><a class="card" href="/wearcast-web/">
+      <span class="name">WearCast <span class="arrow">→</span></span>
+      <span class="desc">What to wear for your weather: outfits, hourly forecasts and personal check-ins.</span>
+      <span class="meta"><span class="tag">Web</span><span class="tag test">Android · testing</span><span class="tag">English</span></span>
+    </a></li>
+
+    <li><a class="card" href="/shadespot-intro/">
+      <span class="name">ShadeSpot <span class="arrow">→</span></span>
+      <span class="desc" lang="ko">주차하기 전에, 그 자리가 언제까지 그늘인지 알려 주는 무료 웹앱.</span>
+      <span class="meta"><span class="tag test">지인 테스트 중</span><span class="tag">Web</span><span class="tag">한국어</span></span>
+    </a></li>
+  </ul>
+
+  <footer>© Altair Research Lab</footer>
+</main>
 </body>
 </html>

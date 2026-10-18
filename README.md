@@ -49,7 +49,11 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=http
 **지켜 온 기준:**
 - **넣는 것:** 공개 주소로 열리는 앱·사이트. **안 넣는 것:** 블로그(ABAD·AEE·GDS), 비공개·진행 중·접은 프로젝트.
   전체 현황은 비공개 `altair0622/control-tower` 의 `PROJECTS.md` 가 맡는다.
-- **종류를 정확히:** `웹 앱`(주소가 곧 앱) · `웹사이트`(읽는 곳) · `소개 페이지`(앱은 아직 비공개). 처음엔 전부 "Web" 으로 뭉뚱그렸다가 고쳤다.
+- **종류는 "자기 도메인의 웹사이트가 있느냐"로 가른다** (10-17 사용자 기준):
+  `웹사이트 · 도메인` — FocusTone Lab(focustonelab.com) · PriceAfter(priceafter.com) · ShadeSpot(shadespot.app) · Uncommon Plant(uncommonplant.com).
+  `웹 앱` — 사이트 없이 앱만 배포한 것: PeachPlay · Personal Color Mirror · Sprout Frame · WearCast (전부 이 도메인 밑 `/이름/`).
+  처음엔 전부 "Web" 으로 뭉뚱그렸고, 다음엔 "주소가 곧 앱이냐"로 나눴다가 이 기준으로 다시 고쳤다.
+  ShadeSpot 은 한국어 지인 테스트 안내(`/shadespot-intro/`)에 걸었었는데, 실제 사이트는 `shadespot.app`(영어)이다.
 - **언어는 앱을 열어서 확인한다.** 소개 문구 언어로 짐작하지 않는다 — 처음에 FocusTone Lab·PriceAfter·Personal Color Mirror 를
   "한국어"로 잘못 달았다. 셋 다 한/영이다(Personal Color Mirror 는 브라우저 언어를 보고 자동 선택).
 - **설명은 각 앱 사이트의 문구를 따른다.** 허브가 앱보다 센 주장을 하지 않는다.

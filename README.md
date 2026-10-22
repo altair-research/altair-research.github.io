@@ -1,5 +1,11 @@
 # altair-research.github.io
 
+> 갱신: 2026-10-22
+> 상태: 첫 화면 = 앱 8개 허브·포트폴리오(한/영). 10-22 앱별 'AI 의존도' 추가.
+> 다음: 포트폴리오로 키우기 — 공개 연락처·받을 일의 범위는 사용자 결정 대기(컨트롤 타워 보드 ⏸ HUB-PORTFOLIO).
+> 막힘: 없음
+> 더 볼 곳: 이 문서 '첫 화면' 절 · `index.html` · 컨트롤 타워 `README.md`
+
 조직의 GitHub Pages 사용자 사이트(도메인 루트). 하는 일이 둘이다 — **첫 화면(앱 허브)** 과 **`assetlinks.json`**.
 
 - **`.well-known/assetlinks.json`** — 안드로이드 앱과 이 도메인이 같은 주인임을 증명하는 파일(Digital Asset Links).
@@ -61,3 +67,30 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=http
 **새 앱 추가:** 폰 크기(375×812)로 첫 화면을 캡처해 `assets/hub/<이름>.jpg`(가로 300px), 해당 카테고리 `<ul class="grid">` 에 카드
 `<li>` 하나. 바로가기의 개수도 고친다. 문구는 `data-ko`·`data-en` 둘 다.
 **`index.html` 을 고칠 때 `.well-known/` 은 건드리지 않는다.**
+
+## AI 의존도 (2026-10-22 추가)
+
+**결정이 바뀌었다.** 전에는 AI 의존도를 최대한 낮추고 제한적으로만 쓰려 했다.
+이제는 **의존도가 커도 사업성이 있으면 밀고 나간다.** 그래서 숨기지 않고 앱마다 투명하게 보여 준다.
+
+**재는 기준: "앱을 쓸 때 AI가 필요한가."** 코드를 AI 도구로 함께 짰는지는 넣지 않았다 — 모든 앱이 해당해 구분이 안 된다.
+이 축을 고른 이유는 **이용당 비용과 끊길 위험**(AI 서비스 값이 오르거나 막히면 그 기능이 멈춘다)이 여기서 갈리기 때문이다.
+
+| 단계 | 뜻 |
+|---|---|
+| ▱▱▱ 없음 | AI 없이 동작 |
+| ▰▱▱ 기기 안 · 만들 때만 | 폰 안에서 도는 인식(서버·이용료 없음), 또는 앱 속 이미지 등을 AI로 만들었지만 실행엔 불필요 |
+| ▰▰▱ 일부 기능 | 일부 기능이 실행 중 AI 서비스를 부른다 — 그 기능은 이용당 비용이 들고, 없으면 그 기능만 빠진다 |
+| ▰▰▰ 핵심 | AI 없으면 앱이 동작하지 않는다 |
+
+**10-22 판정** — 각 저장소 코드를 직접 검색해 확인했다(AI API 호출·모델 파일·외부 전송 여부):
+
+| 앱 | 단계 | 근거 |
+|---|---|---|
+| PriceAfter | 일부 기능 | '사진으로 찾기'가 워커를 거쳐 이미지 인식 AI(Anthropic 등)로 사진을 보낸다. 바코드·직접 입력은 AI 없음 |
+| Sprout Frame | 기기 안 | `app/labelread.js` + tesseract(wasm) — 서버로 보내는 코드 없음 |
+| WearCast | 만들 때만 | 코디 이미지를 이미지 생성 도구로 만들었다(`tool/make_prompts.dart`, 디자인 문서). 앱 코드엔 AI 없음 |
+| PeachPlay | 없음 | 읽어주기는 브라우저 내장 `speechSynthesis` |
+| FocusTone Lab · Uncommon Plant · Personal Color Mirror · ShadeSpot | 없음 | AI 호출·모델 없음 |
+
+**판정이 바뀌는 때:** 앱이 AI 기능을 새로 넣거나 빼면 카드의 `<span class="ai lvN">` 를 고친다. 0~3 이 위 단계다.

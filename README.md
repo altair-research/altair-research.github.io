@@ -94,3 +94,14 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=http
 | FocusTone Lab · Uncommon Plant · Personal Color Mirror · ShadeSpot | 없음 | AI 호출·모델 없음 |
 
 **판정이 바뀌는 때:** 앱이 AI 기능을 새로 넣거나 빼면 카드의 `<span class="ai lvN">` 를 고친다. 0~3 이 위 단계다.
+
+## 앱 개인정보처리방침 (2026-10-27 추가)
+
+Play 스토어가 요구하는 공개 개인정보처리방침을 `privacy/<앱>/` 한 장으로 둔다(사용자 10-27 결정: 앱마다 새 공개 저장소를 만들지 않고 허브에 둔다).
+첫 화면 카드에는 걸지 않는다 — 스토어 등록 정보에서만 링크한다.
+
+| 앱 | 주소 | 원본 |
+|---|---|---|
+| Battery One | https://altair-research.github.io/privacy/battery-one/ | `altair-research/battery-one-app` 의 `docs/privacy.md`·`docs/privacy.html` |
+
+문구를 고칠 때는 원본 저장소를 먼저 고치고 여기로 옮긴다. 시행일도 함께 바꾼다.

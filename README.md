@@ -103,5 +103,6 @@ Play 스토어가 요구하는 공개 개인정보처리방침을 `privacy/<앱>
 | 앱 | 주소 | 원본 |
 |---|---|---|
 | Battery One | https://altair-research.github.io/privacy/battery-one/ | `altair-research/battery-one-app` 의 `docs/privacy.md`·`docs/privacy.html` |
+| SetUp | https://altair-research.github.io/privacy/setup/ | `altair-research/gym_app`(로컬 `C:\dev\gym_app`) 의 `docs/beta-package/store-prep.md` §1 |
 
 문구를 고칠 때는 원본 저장소를 먼저 고치고 여기로 옮긴다. 시행일도 함께 바꾼다.
